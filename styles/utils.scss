@@ -4,8 +4,10 @@ $breakpoints: (mobile: 568px, tablet: 767px, desktop: 992px);
 
 .light {
   --theme-background: #F8F8FB;
+  --theme-header-background: #373B53;
 }
 
 .dark {
   --theme-background: #141625;
+  --theme-header-background: #1E2139;
 }
