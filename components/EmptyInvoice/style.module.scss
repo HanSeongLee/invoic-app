@@ -1,0 +1,31 @@
+
+.emptyInvoice {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-top: 102px;
+
+  .image {
+    margin-bottom: 40px;
+  }
+
+  .title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 22px;
+    letter-spacing: -0.625px;
+    color: #0C0E16;
+    margin-bottom: 24px;
+  }
+
+  .description {
+    width: 217px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: -0.25px;
+    color: #888EB0;
+  }
+}
