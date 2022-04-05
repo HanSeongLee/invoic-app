@@ -1,0 +1,116 @@
+
+.invoiceCard {
+  display: grid;
+  grid-template-areas: "id clientName"
+                       "paymentDue statusWrapper"
+                       "total statusWrapper";
+  background: #FFFFFF;
+  box-shadow: 0px 10px 10px -10px rgba(72, 84, 159, 0.1);
+  border-radius: 8px;
+  padding: 24px;
+
+  .id {
+    grid-area: id;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: -0.25px;
+    color: #0C0E16;
+    margin-bottom: 24px;
+
+    .hashtag {
+      color: #7E88C3;
+    }
+  }
+
+  .clientName {
+    grid-area: clientName;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: -0.25px;
+    color: #858BB2;
+    text-align: right;
+  }
+
+  .paymentDue {
+    grid-area: paymentDue;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: -0.25px;
+    color: #888EB0;
+    margin-bottom: 8px;
+  }
+
+  .total {
+    grid-area: total;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.8px;
+    color: #0C0E16;
+  }
+
+  .statusWrapper {
+    grid-area: statusWrapper;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    .status {
+      position: relative;
+      width: 104px;
+      height: 40px;
+      font-weight: 700;
+      font-size: 12px;
+      line-height: 15px;
+      letter-spacing: -0.25px;
+      color: #33D69F;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(51, 214, 159, 0.06);
+      border-radius: 6px;
+      text-transform: capitalize;
+
+      &[data-status='paid'] {
+        background: rgba(51, 214, 159, 0.06);
+        color: #33D69F;
+
+        &::before {
+          background: #33D69F;
+        }
+      }
+
+      &[data-status='pending'] {
+        background: rgba(255, 143, 0, 0.06);
+        color: #FF8F00;
+
+        &::before {
+          background: #FF8F00;
+        }
+      }
+
+      &[data-status='draft'] {
+        background: rgba(55, 59, 83, 0.06);
+        color: #373B53;
+
+        &::before {
+          background: #373B53;
+        }
+      }
+
+      &::before {
+        display: inline-block;
+        position: relative;
+        width: 8px;
+        height: 8px;
+        background: #33D69F;
+        border-radius: 50%;
+        content: "";
+        margin-right: 8px;
+      }
+    }
+  }
+}
