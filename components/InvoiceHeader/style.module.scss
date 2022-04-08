@@ -1,0 +1,32 @@
+
+.invoiceHeader {
+  padding-top: 32px;
+
+  .textContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 22px;
+    letter-spacing: -0.625px;
+    color: #0C0E16;
+    margin-bottom: 4px;
+  }
+
+  .subtitle {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: -0.25px;
+    color: #888EB0;
+  }
+
+  .buttonContainer {
+    display: flex;
+    grid-gap: 18px;
+  }
+}
