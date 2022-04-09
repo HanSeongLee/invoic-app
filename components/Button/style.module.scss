@@ -3,6 +3,7 @@
   min-height: 44px;
   display: flex;
   align-items: center;
+  justify-content: center;
   grid-gap: 8px;
   font-weight: 700;
   font-size: 12px;
@@ -12,8 +13,21 @@
   background: #7C5DFA;
   border-radius: 24px;
   border: none;
-  padding: 6px 14px 6px 6px;
+  padding: 17px 24px 16px;
 
+  &.icon {
+    padding: 6px 14px 6px 6px;
+  }
+
+  &.secondary {
+    background: #F9FAFE;
+    color: #7E88C3;
+  }
+
+  &.danger {
+    background: #EC5757;
+  }
+  
   .iconWrapper {
     width: 32px;
     height: 32px;
