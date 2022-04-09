@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './style.module.scss';
+import StatusBox from "../StatusBox";
 
 interface IProps {
     id: string;
@@ -29,11 +30,7 @@ const InvoiceCard: React.FC<IProps> = ({
                 £ {total?.toLocaleString(undefined, { minimumFractionDigits: 2 })}
             </span>
             <div className={styles.statusWrapper}>
-                <div className={styles.status}
-                     data-status={status?.toLowerCase()}
-                >
-                    {status}
-                </div>
+                <StatusBox status={status} />
             </div>
         </div>
     );
