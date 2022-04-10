@@ -2,6 +2,7 @@
   "name": "frontend-mentor-nextjs-ts-template",
   "version": "0.1.0",
   "private": true,
+  "typings": "main.d.ts",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
