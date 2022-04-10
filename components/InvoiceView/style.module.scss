@@ -1,0 +1,158 @@
+
+.invoiceView {
+  display: flex;
+  flex-direction: column;
+  grid-gap: 16px;
+
+  @mixin Box {
+    background: #FFFFFF;
+    box-shadow: 0px 10px 10px -10px rgba(72, 84, 159, 0.1);
+    border-radius: 8px;
+  }
+
+  .statusBox {
+    @include Box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 24px 27px;
+
+    .label {
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 15px;
+      letter-spacing: -0.25px;
+      color: #858BB2;
+    }
+  }
+
+  .DetailsBox {
+    @include Box;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: -0.25px;
+    color: #7E88C3;
+    padding: 24px;
+
+    .idAndDescriptionContainer {
+      margin-bottom: 30px;
+    }
+
+    .id {
+      font-weight: 700;
+      font-size: 12px;
+      line-height: 15px;
+      letter-spacing: -0.25px;
+      color: #0C0E16;
+      margin-bottom: 4px;
+
+      .hashtag {
+        color: #7E88C3;
+      }
+    }
+
+    .address {
+      font-size: 11px;
+      line-height: 18px;
+      letter-spacing: -0.23px;
+      margin-bottom: 31px;
+    }
+
+    .propertyContainer {
+      display: grid;
+      grid-gap: 32px;
+      grid-template-areas: "InvoiceDate BillTo"
+                           "PaymentDue BillTo"
+                           "SentTo SentTo";
+      margin-bottom: 40px;
+    }
+
+    .property {
+      &.invoiceDate {
+        grid-area: InvoiceDate;
+      }
+
+      &.billTo {
+        grid-area: BillTo;
+
+        .address {
+          margin-top: 8px;
+          margin-bottom: 0;
+        }
+      }
+
+      &.paymentDue {
+        grid-area: PaymentDue;
+      }
+
+      &.sentTo {
+        grid-area: SentTo;
+      }
+
+      .label {
+        margin-bottom: 12px;
+      }
+
+      .value {
+        font-weight: 700;
+        font-size: 15px;
+        line-height: 20px;
+        letter-spacing: -0.31px;
+        color: #0C0E16;
+      }
+    }
+
+    .itemBox {
+      background: #F9FAFE;
+      border-radius: 8px 8px 0px 0px;
+      padding: 24px;
+
+      .itemContainer {
+        display: flex;
+        flex-direction: column;
+        grid-gap: 24px;
+
+        .item {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          font-weight: 700;
+          font-size: 12px;
+          line-height: 15px;
+          letter-spacing: -0.25px;
+          color: #0C0E16;
+
+          .name {
+            margin-bottom: 8px;
+          }
+
+          .quantityAndPrice {
+            color: #7E88C3;
+          }
+        }
+      }
+    }
+
+    .totalBox {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-weight: 500;
+      font-size: 11px;
+      line-height: 18px;
+      letter-spacing: -0.23px;
+      color: #FFFFFF;
+      background: #373B53;
+      border-radius: 0px 0px 8px 8px;
+      padding: 24px;
+
+      .total {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 32px;
+        letter-spacing: -0.42px;
+      }
+    }
+  }
+}
