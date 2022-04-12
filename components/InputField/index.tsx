@@ -1,9 +1,10 @@
 import React, {InputHTMLAttributes} from 'react';
 import styles from './style.module.scss';
+import cn from "classnames";
 
-const InputField: React.FC<InputHTMLAttributes<HTMLInputElement>> = ({ children, ...props }) => {
+const InputField: React.FC<InputHTMLAttributes<HTMLInputElement>> = ({ className, children, ...props }) => {
     return (
-        <div className={styles.inputField}>
+        <div className={cn(styles.inputField, className)}>
             <label className={styles.label}
                    htmlFor={props?.id}
             >
