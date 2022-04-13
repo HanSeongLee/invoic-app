@@ -1,0 +1,28 @@
+
+.item {
+  display: flex;
+  flex-direction: column;
+  grid-gap: 24px;
+
+  .itemDetailsContainer {
+    display: flex;
+    align-items: center;
+    grid-gap: 16px;
+  }
+
+  .totalInputField {
+    input {
+      color: #888EB0;
+      border: none;
+      padding: 0;
+    }
+  }
+
+  .deleteButton {
+    display: flex;
+    background: transparent;
+    border: none;
+    margin-top: 18px;
+    cursor: pointer;
+  }
+}
