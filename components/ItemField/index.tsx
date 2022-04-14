@@ -20,30 +20,30 @@ const ItemField: React.FC<IProps> = ({
         >
             <InputFieldController control={control}
                                   type={'text'}
-                                  id={`items.name[${index}]`}
-                                  name={`items.name[${index}]`}
+                                  id={`items[${index}].name`}
+                                  name={`items[${index}].name`}
             >
                 Item Name
             </InputFieldController>
             <div className={styles.itemDetailsContainer}>
                 <InputFieldController control={control}
                                       type={'text'}
-                                      id={`items.quantity[${index}]`}
-                                      name={`items.quantity[${index}]`}
+                                      id={`items[${index}].quantity`}
+                                      name={`items[${index}].quantity`}
                 >
                     Qty.
                 </InputFieldController>
                 <InputFieldController control={control}
                                       type={'text'}
-                                      id={`items.price[${index}]`}
-                                      name={`items.price[${index}]`}
+                                      id={`items[${index}].price`}
+                                      name={`items[${index}].price`}
                 >
                     Price
                 </InputFieldController>
                 <InputFieldController control={control}
                                       className={styles.totalInputField}
                                       type={'text'}
-                                      name={`items.total[${index}]`}
+                                      name={`items[${index}].total`}
                                       disabled
                 >
                     Total
