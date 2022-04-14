@@ -48,7 +48,10 @@ const ItemField: React.FC<IProps> = ({
                 >
                     Total
                 </InputFieldController>
-                <button className={styles.deleteButton}>
+                <button className={styles.deleteButton}
+                        type={'button'}
+                        onClick={onDelete}
+                >
                     <img src={'/img/icon-delete.svg'}
                          alt={'delete'}
                     />
